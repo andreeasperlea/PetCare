@@ -1,0 +1,5 @@
+- to create python virtual enviroment ``python -m venv <numevenv>``
+- to activate venv ``./venv/Scripts/activate`` (if venv is called "venv")
+---
+- to dump all dependencies into a file ``pip freeze > requirements.txt``
+- to install dependencies from file ``pip install -r requirements.txt``
