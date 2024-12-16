@@ -1,9 +1,16 @@
+import uuid
+from datetime import datetime
+
+from sqlalchemy import UUID, Column, String, DateTime, ForeignKey
+from sqlalchemy.orm import relationship
+from .base import Base
+
 class User(Base):
      __tablename__ = "users"
      id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4, unique=True, nullable=False)
      first_name = Column(String(100), nullable=False)
      last_name = Column(String(100), nullable=False)
-     user_email = Column(String(255), ForeignKey("users.email"), nullable=False)
+     user_email = Column(String(255), nullable=False)
      password=Column(String(100), nullable=False)
      role=Column(String(100), nullable=False)
      phone_number=Column(String(15))
